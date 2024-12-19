@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://dcqbh2tpiq83b"]
+
+[ext_resource type="PackedScene" uid="uid://cnsolo3xtwop1" path="res://scenes/Terrain.tscn" id="1_ttku3"]
+[ext_resource type="PackedScene" uid="uid://dm5s0t1vvi8y8" path="res://assets/models/buildings/Housing/housing_complex.tscn" id="2_7gefd"]
+[ext_resource type="PackedScene" uid="uid://fkphxstss020" path="res://assets/models/characters/Player.tscn" id="3_70b4u"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xrjt0"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_nmpu3"]
+sky_material = SubResource("ProceduralSkyMaterial_xrjt0")
+
+[sub_resource type="Environment" id="Environment_ospnt"]
+background_mode = 2
+sky = SubResource("Sky_nmpu3")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ospnt")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 705.759, 686.887)
+shadow_enabled = true
+
+[node name="Mars Terrain" parent="." instance=ExtResource("1_ttku3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+
+[node name="Node3D" parent="." instance=ExtResource("2_7gefd")]
+transform = Transform3D(-4.37114e-08, -3.48787e-16, -1, 3.48787e-16, 1, -3.48787e-16, 1, -3.48787e-16, -4.37114e-08, 500, 53.4326, -330)
+
+[node name="Player" parent="." instance=ExtResource("3_70b4u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 500, 56.9338, -330)
