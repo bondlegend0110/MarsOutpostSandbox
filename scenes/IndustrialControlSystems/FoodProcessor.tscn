@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://cpxgabvljryy6"]
+
+[node name="FoodProcessor" type="Node3D"]

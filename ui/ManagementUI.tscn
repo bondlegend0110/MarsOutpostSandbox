@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://b6ullcmt2lkkm"]
+
+[node name="ManagementUi" type="Node3D"]
