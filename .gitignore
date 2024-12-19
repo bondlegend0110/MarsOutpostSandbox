@@ -1,3 +1,10 @@
 # Godot 4+ specific ignores
 .godot/
 .DS_Store
+/assets/textures
+/assets/models/buildings/Housing/mars_base_camp_diploma
+/assets/models/terrain/Mars
+/assets/models/characters/team_fortress_2_-_medic_robot
+/assets/models
+/addons
+/demo
