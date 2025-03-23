@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcn01shkwtog7"]
+
+[ext_resource type="PackedScene" uid="uid://bpu1qopbqkuag" path="res://scenes/IndustrialControlSystems/Well.tscn" id="1_4kkqd"]
+
+[node name="Bottom Level" type="Node3D"]
+
+[node name="Water Heater" parent="." instance=ExtResource("1_4kkqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)

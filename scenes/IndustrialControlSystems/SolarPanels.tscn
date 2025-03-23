@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://doqhfklnkvdfb"]
+
+[ext_resource type="ArrayMesh" uid="uid://dh7pbucmuhg2y" path="res://assets/models/buildings/Housing/mars_base_camp_diploma/mars_base_camp_diploma_Object_9.res" id="1_3ujaf"]
+[ext_resource type="ArrayMesh" uid="uid://b4cl4srd1lmf6" path="res://assets/models/buildings/Housing/mars_base_camp_diploma/mars_base_camp_diploma_Object11.res" id="2_7gole"]
+[ext_resource type="ArrayMesh" uid="uid://dexh382iwsnqm" path="res://assets/models/buildings/Housing/mars_base_camp_diploma/mars_base_camp_diploma_Object_10.res" id="3_r2gcc"]
+
+[node name="SolarPanels" type="Node3D"]
+
+[node name="MarsBaseCampDiplomaObject9" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.01, -6.97574e-18, -3.04919e-25, 0, -4.37114e-10, 0.01, -6.97574e-18, -0.01, -4.37114e-10, -18.5, 2.08165e-12, -23)
+mesh = ExtResource("1_3ujaf")
+
+[node name="MarsBaseCampDiplomaObject11" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.01, -6.97574e-18, -1.5246e-25, -1.5246e-25, -4.37114e-10, 0.01, -6.97574e-18, -0.01, -4.37114e-10, -18.5, 2.08165e-12, -23)
+mesh = ExtResource("2_7gole")
+
+[node name="MarsBaseCampDiplomaObject10" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.01, -6.97574e-18, -1.5246e-25, -1.5246e-25, -4.37114e-10, 0.01, -6.97574e-18, -0.01, -4.37114e-10, -19, 2.08165e-12, -23)
+mesh = ExtResource("3_r2gcc")

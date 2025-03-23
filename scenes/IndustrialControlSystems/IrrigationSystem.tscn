@@ -1,0 +1,83 @@
+[gd_scene load_steps=11 format=3 uid="uid://qyhmokqcjewl"]
+
+[ext_resource type="ArrayMesh" uid="uid://dn3vetbykym3k" path="res://assets/models/buildings/Water Production/Axel_001_3.res" id="1_m38d8"]
+[ext_resource type="ArrayMesh" uid="uid://batl8vl3brjsv" path="res://assets/models/buildings/Water Production/Axel_2.res" id="2_a2h7k"]
+[ext_resource type="ArrayMesh" uid="uid://eswdsbmho4f8" path="res://assets/models/buildings/Water Production/Cube_4.res" id="3_c6438"]
+[ext_resource type="ArrayMesh" uid="uid://cu51bsa65dmyh" path="res://assets/models/buildings/Water Production/Tireshape2_0.res" id="4_pn15j"]
+[ext_resource type="ArrayMesh" uid="uid://bi6peniiet1g2" path="res://assets/models/buildings/Water Production/Tireshape2_001_1.res" id="5_ayknq"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hsbot"]
+emission_shape_scale = Vector3(19, 2, 3)
+emission_shape = 2
+emission_sphere_radius = 1.0
+direction = Vector3(-0.5, -0.5, 0)
+spread = 5.0
+initial_velocity_min = 20.0
+initial_velocity_max = 25.0
+color = Color(0.8, 0.8, 0.8, 1)
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.0
+
+[sub_resource type="Curve" id="Curve_v2c81"]
+max_value = 0.1
+_data = [Vector2(0.00152439, 0.000988953), 0.0, 0.0, 0, 0, Vector2(0.0137195, 0.0469047), 0.391178, 0.391178, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oxco3"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+use_particle_trails = true
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_glx2o"]
+material = SubResource("StandardMaterial3D_oxco3")
+curve = SubResource("Curve_v2c81")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_e1u1x"]
+emission_shape_scale = Vector3(19, 2, 3)
+emission_shape = 2
+emission_sphere_radius = 1.0
+direction = Vector3(0.5, -0.5, 0)
+spread = 5.0
+initial_velocity_min = 20.0
+initial_velocity_max = 25.0
+
+[node name="WaterSystem" type="Node3D"]
+
+[node name="Axel0013" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.02, 0, 0, 0, -8.74228e-10, -0.02, 0, 0.02, -8.74228e-10, 40.7, 0.5, -0.3)
+mesh = ExtResource("1_m38d8")
+
+[node name="Axel2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.02, 0, 0, 0, -8.74228e-10, -0.02, 0, 0.02, -8.74228e-10, -0.3, 0.5, -0.3)
+mesh = ExtResource("2_a2h7k")
+
+[node name="Cube4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.6, 2.35, 0.08)
+mesh = ExtResource("3_c6438")
+
+[node name="Tireshape20" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 40.7, 0.3, 1.3)
+mesh = ExtResource("4_pn15j")
+
+[node name="Tireshape20011" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 40.7, 0.3, -1.3)
+mesh = ExtResource("5_ayknq")
+
+[node name="Rain0" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.6, 0, 0)
+amount = 1000
+visibility_aabb = AABB(-50, -30, -100, 100, 100, 150)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_hsbot")
+draw_pass_1 = SubResource("RibbonTrailMesh_glx2o")
+
+[node name="Rain1" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.6, 0, 0)
+amount = 1000
+visibility_aabb = AABB(-50, -30, -100, 100, 100, 150)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_e1u1x")
+draw_pass_1 = SubResource("RibbonTrailMesh_glx2o")

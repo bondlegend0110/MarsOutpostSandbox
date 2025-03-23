@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dt7cip4vrh7pk"]
+
+[ext_resource type="PackedScene" uid="uid://dm5s0t1vvi8y8" path="res://scenes/VideoGameStructures/Buildings/housing_complex.tscn" id="1_nq8hg"]
+[ext_resource type="PackedScene" uid="uid://doqhfklnkvdfb" path="res://scenes/IndustrialControlSystems/SolarPanels.tscn" id="2_61bu8"]
+
+[node name="Top Level" type="Node3D"]
+transform = Transform3D(-4.37114e-08, -3.48787e-16, -1, 3.48787e-16, 1, -3.48787e-16, 1, -3.48787e-16, -4.37114e-08, 0, 0, 0)
+
+[node name="mars_base_diploma_housing_complex" parent="." instance=ExtResource("1_nq8hg")]
+
+[node name="SolarPanels" parent="." instance=ExtResource("2_61bu8")]
+transform = Transform3D(-1, 3.48787e-16, 8.74228e-08, 3.48787e-16, 1, -3.48787e-16, -8.74228e-08, -3.48787e-16, -1, 35, 2.08165e-12, -60)

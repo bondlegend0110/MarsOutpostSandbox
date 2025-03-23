@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://yy2mhspek8b2"]
+
+[ext_resource type="Script" path="res://scenes/ProfileComponents/middle_level.gd" id="1_8mbj6"]
+[ext_resource type="PackedScene" uid="uid://qyhmokqcjewl" path="res://scenes/IndustrialControlSystems/IrrigationSystem.tscn" id="1_h4e56"]
+
+[node name="Middle Level" type="Node3D"]
+script = ExtResource("1_8mbj6")
+
+[node name="WaterSystem" parent="." instance=ExtResource("1_h4e56")]
+unique_name_in_owner = true

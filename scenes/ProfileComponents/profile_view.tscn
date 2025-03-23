@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3 uid="uid://c7nym3htayo2c"]
+
+[ext_resource type="PackedScene" uid="uid://bcn01shkwtog7" path="res://scenes/ProfileComponents/bottom_level.tscn" id="1_1piws"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="1_gwu6i"]
+[ext_resource type="Script" path="res://scenes/ProfileComponents/middle_level.gd" id="1_kxnru"]
+[ext_resource type="PackedScene" uid="uid://dt7cip4vrh7pk" path="res://scenes/ProfileComponents/top_level.tscn" id="2_0uqsm"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="2_qdfwp"]
+[ext_resource type="PackedScene" uid="uid://yy2mhspek8b2" path="res://scenes/ProfileComponents/middle_level.tscn" id="5_bdf1u"]
+
+[sub_resource type="Resource" id="Resource_15nxx"]
+script = ExtResource("2_qdfwp")
+duration = 1.0
+transition = 0
+ease = 2
+
+[node name="Profile View" type="Node3D"]
+script = ExtResource("1_kxnru")
+
+[node name="ProfilePhantomCamera3D" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.642787, -0.766045, 0, 0.766044, 0.642788, -16.2724, 100, 30)
+script = ExtResource("1_gwu6i")
+tween_resource = SubResource("Resource_15nxx")
+
+[node name="Bottom Level" parent="." instance=ExtResource("1_1piws")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+
+[node name="Top Level" parent="." instance=ExtResource("2_0uqsm")]
+transform = Transform3D(-4.37114e-08, -3.48787e-16, -1, 3.48787e-16, 1, -3.48787e-16, 1, -3.48787e-16, -4.37114e-08, 2.08165e-12, 50, -130)
+
+[node name="Middle Level" parent="." instance=ExtResource("5_bdf1u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24.7701, -35.8016)

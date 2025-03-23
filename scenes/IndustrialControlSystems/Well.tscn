@@ -1,3 +1,14 @@
-[gd_scene format=3 uid="uid://ca2pa3bei2o23"]
+[gd_scene load_steps=3 format=3 uid="uid://bpu1qopbqkuag"]
 
-[node name="Well" type="Node3D"]
+[ext_resource type="ArrayMesh" uid="uid://bkb7db2rc3la4" path="res://assets/models/buildings/Housing/mars_base_camp_diploma/mars_base_camp_diploma_Object_7.res" id="1_wvls0"]
+[ext_resource type="ArrayMesh" uid="uid://bblb5drs8dyor" path="res://assets/models/buildings/Housing/mars_base_camp_diploma/mars_base_camp_diploma_Object_8.res" id="2_vmucp"]
+
+[node name="Water Heater" type="Node3D"]
+
+[node name="MarsBaseCampDiplomaObject7" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.01, -6.97574e-18, -1.5246e-25, -1.5246e-25, -4.37114e-10, 0.01, -6.97574e-18, -0.01, -4.37114e-10, -30, 2.08165e-12, 25)
+mesh = ExtResource("1_wvls0")
+
+[node name="MarsBaseCampDiplomaObject8" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.01, -6.97574e-18, -1.5246e-25, -1.5246e-25, -4.37114e-10, 0.01, -6.97574e-18, -0.01, -4.37114e-10, -30, 2.08165e-12, 25)
+mesh = ExtResource("2_vmucp")

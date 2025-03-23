@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm5s0t1vvi8y8"]
+
+[ext_resource type="ArrayMesh" uid="uid://c3asa8w5qjvyh" path="res://assets/models/buildings/Housing/mars_base_camp_diploma/mars_base_camp_diploma_Object0.res" id="1_vca3i"]
+[ext_resource type="ArrayMesh" uid="uid://b8diw0igafn2c" path="res://assets/models/buildings/Housing/mars_base_camp_diploma/mars_base_camp_diploma_Object_1.res" id="2_j6oqv"]
+
+[node name="mars_base_diploma_housing_complex" type="Node3D"]
+
+[node name="MarsBaseCampDiplomaObject0" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.01, -6.97574e-18, -3.04919e-25, 0, -4.37114e-10, 0.01, -6.97574e-18, -0.01, -4.37114e-10, 34.5, 2.08165e-12, 2.08165e-12)
+mesh = ExtResource("1_vca3i")
+
+[node name="MarsBaseCampDiplomaObject1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.01, -6.97574e-18, -3.04919e-25, 0, -4.37114e-10, 0.01, -6.97574e-18, -0.01, -4.37114e-10, 34.5, 2.08165e-12, 2.08165e-12)
+mesh = ExtResource("2_j6oqv")
